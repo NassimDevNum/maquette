@@ -1,0 +1,235 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body 
+{
+    justify-content: center;
+    align-items: center;   /* Ici remplacer le center par start si on vuet mettre les logo tt en haut*/
+    flex-wrap: wrap;
+    background: linear-gradient(#C6FFDD,#FBD786,#f7797d);  
+    min-height: 100vh;
+}
+ul .lesCartes
+{
+    display: inline-block;
+    justify-content: center;
+}
+        /* Les deux ronds */
+
+section::before /*Deuxieme cercle */
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f7797d,#FBD786,#C6FFDD);  
+    clip-path: circle(20% at right 70%);
+}
+section::after /* Premier cercle */
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f7797d,#FBD786,#C6FFDD);  
+    clip-path: circle(20% at 10% 40%);
+}
+.container
+{
+    position: relative;
+    z-index: 1;
+    display: flex; /* retier ici si on veut les aligner*/
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+    /* Les logo des 4 langage */
+
+.container .card
+{
+position: relative;
+width: 280px;
+height: 350px;
+margin: 30px;
+box-shadow: 2px 20px 50px rgba(0,0,0,0.3);
+border-radius: 15px;
+background: rgba(255,255,255,0.1);
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+border-left: 1px solid rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(15px);
+}
+.container .card .content
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.5;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+.container .card:hover .content
+{
+    opacity: 1;
+    transform: translateY(-20px);
+    border-radius: 15px;
+}
+.container .card .content .imgBx
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid rgba(0,0,0,0.25);
+    
+}
+.container .card .content .imgBx img
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.container .card .content .contentBx h3
+{
+    color: #f7797d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+}
+.container .card .content .contentBx h3 span
+{
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: initial;
+}
+.container .card .sci
+{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+}
+.container .card .sci li
+{
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: calc(0.1s *var(--i));
+}
+.container .card:hover .sci li
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.container .card .sci li a 
+{
+    color: #f7797d;
+    font-size: 25px;
+}
+body section .container .namePage
+{
+    align-items: flex-start;
+}
+body section .namePage  h1{
+    margin-bottom: auto;
+    padding-top: 55px ;
+    text-align: center;
+    font-size: 50px;
+    color: #f7797d;
+}
+.container .bigCard
+{
+margin: 15px;
+position: relative;
+width: 1300px;
+height: auto;
+margin: 30px;
+box-shadow: 2px 20px 50px rgba(0,0,0,0.3);
+border-radius: 15px;
+background: rgba(255,255,255,0.1);
+overflow: hidden;
+/*display: flex; cela aligne tous les elements de notre div*/
+justify-content: center;
+align-items: center;
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+border-left: 1px solid rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(15px);
+}
+.container  .TextImg
+{
+    float: left;
+    width: 550px;
+    height: 500px;
+    margin-left: 10px;
+}
+.container  .TextImg h2 
+{
+    margin-left:60px ;
+    margin-right:60px ;
+}
+.container  .TextImg p 
+{
+    margin-top: 30px;
+    margin-left:60px ;
+    margin-right:60px ;
+    margin-bottom: 60px;
+}
+.container .TextImg 
+{
+    margin-top: 30px;
+    margin-left:30px ;
+}
+.TextImg img
+{
+    margin-right: 0px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-radius: 15px;
+}
+.container .bigCard .TextImg h4
+{
+    float: right;
+}
+.container .video
+{
+margin: 15px;
+position: relative;
+width: 1300px;;
+height: 370px;
+margin: 30px;
+box-shadow: 2px 20px 50px rgba(0,0,0,0.3);
+border-radius: 15px;
+background: rgba(255,255,255,0.1);
+overflow: hidden;
+/*display: flex; cela aligne tous les elements de notre div*/
+justify-content: center;
+align-items: center;
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+border-left: 1px solid rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(15px);
+}
